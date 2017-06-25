@@ -11,6 +11,6 @@ spec:
     spec:
       containers:
       - name: microdocs-fe
-        image: eu.gcr.io/iconic-setup-91510/microdocs-fe:latest
+        image: eu.gcr.io/iconic-setup-91510/microdocs-fe:%VERSION%
         ports:
         - containerPort: 80
