@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: microdocs-fe
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: microdocs-fe
+    spec:
+      containers:
+      - name: microdocs-fe
+        image: eu.gcr.io/iconic-setup-91510/microdocs-fe:latest
+        ports:
+        - containerPort: 80

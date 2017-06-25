@@ -5,7 +5,7 @@ machine:
     PROJECT_NAME: iconic-setup-91510
     CLUSTER_NAME: cluster-1
     CLOUDSDK_COMPUTE_ZONE: europe-west1-b
-    APP_NAME: curriculi-fe
+    APP_NAME: microdocs-fe
 
 dependencies:
   cache_directories:
