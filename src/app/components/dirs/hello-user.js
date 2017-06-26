@@ -24,7 +24,7 @@ minidocsModule.directive('helloUser', function () {
     scope: {
       user: '='
     },
-    templateUrl: '/app/dirs/hello-user.html'
+    templateUrl: 'app/pages/dirs/hello-user.html'
   };
 
 });
