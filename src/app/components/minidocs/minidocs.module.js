@@ -56,24 +56,8 @@ minidocsModule.config(['$httpProvider', function ($httpProvider) {
   delete $httpProvider.defaults.headers.common['X-Requested-With'];
 }]);
 
-minidocsModule.factory('logoutService', ['$resource', function ($resource) {
-  return $resource('/logout', {},
-    {
-      'logout': {method: 'POST'}
-    });
-}]);
-minidocsModule.factory('loginService', ['$resource', function ($resource) {
-  return $resource('/login', {},
-    {
-      'login': {method: 'POST'}
-    });
-}]);
-minidocsModule.factory('usersService', ['$resource', function ($resource) {
-  return $resource('/current/user', {},
-    {
-      'query': {isArray: false}
-    });
-}]);
+
+
 
 
 

@@ -1,18 +1,17 @@
 minidocsModule.directive('helloUser', function () {
   return {
     restrict: 'E',
-    controller: function ($scope, logoutService, usersService) {
+    controller: function ($scope, $http, usersService) {
       $scope.logout = function () {
-        logoutService.logout({},
+        $http({
+            method: 'POST',
+            url: '/logout'
+          }).then(
           function () {
             $scope.user = usersService.query()
           });
       };
-      $scope.providers = {
-        google: "https://www.googleapis.com/plus/v1/people/me/openIdConnect",
-        yahoo: "http://me.yahoo.com",
-        wordpress: "http://username.wordpress.com"
-      };
+
 
       $scope.login = function (provider) {
         // not using $resource or $http because of CORS issues
