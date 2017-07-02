@@ -25,6 +25,8 @@ deployment:
   prod:
     branch: master
     commands:
+      - cp docker/nginx/nginx.conf dist
+      - cp docker/nginx/Dockerfile dist
       - wget https://raw.githubusercontent.com/kolov/k8s-stuff/master/circleci/deploy.sh
       - chmod +x deploy.sh
       - ./deploy.sh
